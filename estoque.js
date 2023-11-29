@@ -8,3 +8,7 @@ let estoque = {
     'pera': 3,
   },
 };
+
+function getEstoque(){
+    return estoque;
+}
