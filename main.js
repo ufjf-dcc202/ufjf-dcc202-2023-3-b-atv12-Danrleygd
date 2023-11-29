@@ -1,3 +1,6 @@
+const olJoao = document.querySelector("ol#joao");
+const olMaria = document.querySelector("ol#Maria");
+
 document.entrada.addEventListener("submit", leFormulario);
 
 function leFormulario(event) {
