@@ -17,17 +17,30 @@
       <section>
         <form name="entrada">
           <input type="number" name="quantidade" value="5" min="0" max="12" />
-          <label ><input type="radio" name="origem" value="maria" checked />Maria</label>
-          <label ><input type="radio" name="origem" value="joao" checked/>joao</label>
-          <input type="radio" name="origem" value="maria" />
-          <input type="radio" name="origem" value="joao" />
+
+          
+          <fieldset>
+            <legend>Origem</legend>
+            <label
+              ><input
+                type="radio" name="origem" value="maria" checked/>Maria</label>
+            <label
+              ><input
+                type="radio" name="origem" value="joao" checked/>joao</label>
+          </fieldset>
+
+
           <select name="fruta">
             <option value="maca">Maçã</option>
             <option value="pera">Pera</option>
             <option value="banana">Banana</option>
           </select>
+
+
           <input name="fruta" />
           <input type="submit" name="enviar" />
+
+          
         </form>
       </section>
       <section></section>
