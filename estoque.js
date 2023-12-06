@@ -19,9 +19,21 @@ function transacao(origem, destino, tipo, quantidade) {
     for (let i = 0; i < pessoa.length; i++) {
       const monte = pessoa[i];
       if (monte.tipo === tipo) {
-        monte.qnd -= Math.min(quantidade, monte.qnd) ;
+        monte.qnd -= Math.min(quantidade, monte.qnd);
       }
     }
+  }
+  if (origem === "pomar") {
+    const pessoa = estoque[destino];
+    for (let i = 0; i < pessoa.length; i++) {
+      const monte = pessoa[i];
+      if (monte.tipo === tipo) {
+        monte.qnd += Math.max(quantidade, 0);
+        return;
+      }
+    }
+    const novoMonte = { tipo: tipo, qnd: Math.max(quantidade, 0) };
+    pessoa.push(novoMonte);
   }
 }
 export { getEstoque, transacao };
