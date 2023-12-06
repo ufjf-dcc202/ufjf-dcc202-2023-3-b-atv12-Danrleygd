@@ -59,7 +59,7 @@ function transacao(origem, destino, tipo, quantidade) {
 
   const qtdReal = Math.min(quantidade, monteOrigem.qnd);
   monteDestino.qnd += qtdReal;
-  monteDestino.qnd -= qtdReal;
+  monteOrigem.qnd -= qtdReal;
 
   function dePessoaParaPomar(origem, tipo, quantidade) {
     const pessoa = estoque[origem];
