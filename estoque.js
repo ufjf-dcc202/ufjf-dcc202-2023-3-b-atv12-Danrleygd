@@ -41,7 +41,9 @@ function transacao(origem, destino, tipo, quantidade) {
   if (!monteOrigem) {
     return;
   }
+
   let monteDestino;
+
   for (let i = 0; i < pessoaDestino.length; i++) {
     const monte = pessoaDestino[i];
     if (monte.tipo === tipo) {
@@ -49,13 +51,13 @@ function transacao(origem, destino, tipo, quantidade) {
       break;
     }
   }
+
   if (!monteDestino) {
-      monteDestino = { tipo: tipo, qnd: 0 };
+      monteDestino = { 'tipo': tipo, 'qnd': 0 };
       pessoaDestino.push(monteDestino);
   }
 
-
-  const qtdReal =Math.min(quantidade, monteOrigem.qnd);
+  const qtdReal = Math.min(quantidade, monteOrigem.qnd);
   monteDestino.qnd += qtdReal;
   monteDestino.qnd -= qtdReal;
 
